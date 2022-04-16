@@ -1,4 +1,6 @@
 <script>
+  let picPath = "scenery.jpg"
+
   let name = "BFY❤️JUN"
   const now = new Date()
   const start = new Date("08/10/2021")
@@ -10,6 +12,8 @@
 <main>
   <h1>Hello {name}</h1>
   <h2>今天是布布和俊俊在一起的第{Difference_In_Days}天～～
+
+  <img src={picPath} id="bg" alt="">
 </main>
 
 <style>
@@ -20,4 +24,14 @@
    font-size: 40px;
    text-align: center;
   }
+
+  #bg {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+    opacity:0.35;
+  }
+
 </style>
