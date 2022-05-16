@@ -1,22 +1,9 @@
 <script>
-  let picPath = ["scenery.jpg", "fish.jpeg", "butterfly.jpeg"]
-
-  let guest = ""
   let name = "BFY❤️JUN"
   const now = new Date()
   const start = new Date("08/10/2021")
   let Difference_In_Time = now.getTime() - start.getTime(); 
 	var Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
-
-  let count= 0
-  const IncrementCounter = () => {
-    if (count + 1 >= picPath.length) {
-      count = 0
-    } else {
-      count ++
-    }
-  }
-
   let events = [
     {id:0, name: "在一起", color:"pink", date:"2021-8-10", },
     {id:1, name: "250天纪念", color:"yellow", date:"2022-4-17", }
@@ -26,24 +13,13 @@
     document.getElementById(String(info.id)).style.backgroundColor=info.color
   }
 
-  $: fullName = `${guest}君`
-
 </script>
 
 <main>
   <h1>{name}</h1>
-  <h3 class="head">Hello {fullName}</h3>
   <h3 class="head">今天是布布和俊俊在一起的第{Difference_In_Days}天～～
-
-  <div>
-    <input type="text" bind:value={guest} placeholder="你是谁？">
-    <button id="btn1" on:click={IncrementCounter}>❤️</button>
-  </div>
-
-  <br />
-
+  <br>
   <h3 class="head">重要的日子</h3>
-
     {#each events as event (event.id)}
       <div class="card" id={String(event.id)} on:click={() => handleCardClick(event)}>
       
@@ -53,14 +29,6 @@
       </div>
     {/each}
 
-
-
-  
-
-  <div style="margin-bottom: 60px;">
-    <img src={picPath[count]} id="bg" alt="">
-  </div>
-  
 </main>
 
 <style>
