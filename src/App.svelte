@@ -6,7 +6,8 @@
 	var Difference_In_Days = Math.floor(Difference_In_Time / (1000 * 3600 * 24));
   let events = [
     {id:0, name: "在一起", color:"pink", date:"2021-8-10", },
-    {id:1, name: "250天纪念", color:"yellow", date:"2022-4-17", }
+    {id:1, name: "250天纪念", color:"yellow", date:"2022-4-17", },
+    {id:2, name: "300天纪念", color:"orange", date:"2022-6-6", }
   ]
 
   const handleCardClick = (/** @type {{ id: any; name?: string; color: any; date?: string; }} */ info) => {
